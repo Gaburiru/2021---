@@ -10,4 +10,4 @@ s3 = boto3.resource(
     verify=False
 )
 BUCKET='zhuolin'
-PATH='D:\大数据实训\workspace\文件同步器python版'
+PATH='D:\大数据实训\workspace\文件同步器python版\__pycache__'

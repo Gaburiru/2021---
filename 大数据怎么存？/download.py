@@ -1,6 +1,6 @@
 from setting import s3,BUCKET
 import botocore
-def get_file_by_key(bucket=BUCKET,key):
+def get_file_by_key(bucket,key):
 	try:
 		s3.Object(bucket, key).download_file(key)
 
@@ -10,6 +10,9 @@ def get_file_by_key(bucket=BUCKET,key):
 		else:
 			raise
 			
-def get_big_file(bucket=BUCKET,key):
-	try:
-		s3resumable=S3Resumable(s3)
+import getObject
+Objectlist=getObject(BUCKET)
+for obj in Objectlist:
+	get_file_by_key(BUCKET,obj)
+	
+		

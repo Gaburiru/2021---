@@ -57,7 +57,7 @@ for str in list:
 #print(newlist)
 
 for path in list:
-	print(list.index(path))
+	@print(list.index(path))
 	if source_size[list.index(path)]<limitsize:
 		upload(BUCKET,path,newlist[list.index(path)])
 	else:
