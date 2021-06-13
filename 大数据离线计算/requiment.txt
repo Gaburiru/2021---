@@ -1,0 +1,6 @@
+pure-sasl
+
+thrift_sasl ==0.2.1 --no-deps
+
+impyla
+thriftpy
