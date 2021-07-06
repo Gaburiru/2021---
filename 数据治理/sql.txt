@@ -1,0 +1,12 @@
+需求1
+select count(user_name),DATE_FORMAT(user_register_time, '%Y-%m') from student35.user_info GROUP BY DATE_FORMAT(user_register_time, '%Y-%m')
+select sum(price),DATE_FORMAT(order_time, '%Y-%m') from student35.order_info GROUP BY DATE_FORMAT(order_time, '%Y-%m')
+需求2
+select sum(price),recv_city,DATE_FORMAT(order_time, '%Y-%m') from student35.order_info GROUP BY recv_city ,DATE_FORMAT(order_time, '%Y-%m')
+需求3
+select sum(price),splx,recv_city ,DATE_FORMAT(order_time, '%Y-%m') from student35.order_info GROUP BY splx,recv_city,DATE_FORMAT(order_time, '%Y-%m')
+需求4
+select sum(order_info.price),order_info.splx,DATE_FORMAT(order_info.order_time, '%Y-%m'),user_info.sex
+from student35.order_info,student35.user_info
+where order_info.user_id=user_info.user_id
+group BY DATE_FORMAT(order_time , '%Y-%m')
